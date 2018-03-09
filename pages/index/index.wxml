@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="gameContainer">
+  <view class="winCount">
+    <text>你已经获胜了<text class="counts">{{winCount}}</text>次</text>
+    <view class="handImg">
+      <image src="{{changeImgs}}"></image>
+      <text>{{resultWorld}}</text>
+      <image src="{{clickImgs}}"></image>
+    </view>
+  </view>
+
+  <view class="gameChoice">
+    <view class="gameChoiceText">出拳吧，少年！</view>
+    <view class="showImgContainer">
+      <block wx:for="{{showImg}}" wx:key="*this">
+        <view class="itemColumn"  id="{{index}}" bindtap='clickImg'>
+          <image src="{{item}}"></image>
+        </view>
+      </block>
+    </view>
+    
+    <view class="againBtn" bindtap='again'>
+      <button>Again!</button>
+    </view>
+  </view>
+</view>
