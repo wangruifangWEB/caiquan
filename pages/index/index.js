@@ -25,7 +25,7 @@ Page({
       }
       thisPage.setData({ changeImgs: thisPage.data.showImg[numChange] });
       numChange++;
-    },300)
+    },100)
   },
   clickImg:function(e){
     if (!this.data.clickState) {
@@ -64,7 +64,7 @@ Page({
     if (computerImg == shitou && userImg == jiandao) {
       this.resultWorld = '你输了！'
     }
-    if (computerImg == shitou) {
+    if (computerImg == userImg) {
       this.resultWorld = '平局！'
     }
     this.setData({ 
@@ -80,7 +80,7 @@ Page({
     this.changeImg();
     this.setData({
       clickState:true,
-      winCount: 0,
+      // winCount: 0,
       changeImgs: '',
       clickImgs: '../img/shitou.png',
     })
